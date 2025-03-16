@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  video-balancer:
+    build: .
+    environment:
+      - CDN_HOST=cdn.example.com
+    ports:
+      - "50051:50051"

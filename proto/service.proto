@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package my.custom.server;
+
+option go_package = "video-balancer/proto;proto";
+
+service Service {
+  rpc Method (VideoRequest) returns (VideoResponse);
+}
+
+message VideoRequest {
+  string video = 1;
+}
+
+message VideoResponse {
+  string redirect_url = 1;
+}
+
